@@ -67,6 +67,21 @@ namespace TicTacToe.Test.Game
             Assert.Equal("player-1", game.GetWinner());
         }
 
+                [Fact]
+        public void ShouldWinOnAntiDiagonal()
+        {
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
+
+            game.Play(2, 0); // player-1
+            game.Play(0, 1); // player-2
+            game.Play(1, 1); // player-1
+            game.Play(1, 2); // player-2
+            game.Play(0, 2); // player-1 - wins
+
+            Assert.True(game.IsGameOver());
+            Assert.Equal("player-1", game.GetWinner());
+        }
+
         [Fact]
         public void ShouldDetectDraw()
         {
