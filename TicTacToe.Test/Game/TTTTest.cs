@@ -25,7 +25,7 @@ namespace TicTacToe.Test.Game
         [Fact]
         public void ShouldWinOnRow()
         {
-            var game = new TTT(new List<string> { "player-1", "player-2" });
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
 
             game.Play(0, 0); // player-1
             game.Play(1, 0); // player-2
@@ -40,7 +40,7 @@ namespace TicTacToe.Test.Game
         [Fact]
         public void ShouldWinOnColumn()
         {
-            var game = new TTT(new List<string> { "player-1", "player-2" });
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
 
             game.Play(0, 0); // player-1
             game.Play(0, 1); // player-2
@@ -55,7 +55,7 @@ namespace TicTacToe.Test.Game
         [Fact]
         public void ShouldWinOnDiagonal()
         {
-            var game = new TTT(new List<string> { "player-1", "player-2" });
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
 
             game.Play(0, 0); // player-1
             game.Play(0, 1); // player-2
@@ -70,7 +70,7 @@ namespace TicTacToe.Test.Game
         [Fact]
         public void ShouldDetectDraw()
         {
-            var game = new TTT(new List<string> { "player-1", "player-2" });
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
 
             game.Play(0, 0); // player-1
             game.Play(0, 1); // player-2
@@ -88,7 +88,7 @@ namespace TicTacToe.Test.Game
         [Fact]
         public void ShouldReturnCurrentPlayerCorrectly()
         {
-            var game = new TTT(new List<string> { "player-1", "player-2" });
+            TTT game = new TTT(new List<string> { "player-1", "player-2" });
             Assert.Equal("player-1", game.CurrentPlayer());
 
             game.Play(0, 0);
