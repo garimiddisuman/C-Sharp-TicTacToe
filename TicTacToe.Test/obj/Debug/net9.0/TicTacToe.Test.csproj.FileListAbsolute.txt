@@ -103,3 +103,4 @@ C:\Users\garim\workspace\Games\TicTacToe\TicTacToe.Test\obj\Debug\net9.0\refint\
 C:\Users\garim\workspace\Games\TicTacToe\TicTacToe.Test\obj\Debug\net9.0\TicTacToe.Test.pdb
 C:\Users\garim\workspace\Games\TicTacToe\TicTacToe.Test\obj\Debug\net9.0\TicTacToe.Test.genruntimeconfig.cache
 C:\Users\garim\workspace\Games\TicTacToe\TicTacToe.Test\obj\Debug\net9.0\ref\TicTacToe.Test.dll
+C:\Users\garim\workspace\Games\TicTacToe\TicTacToe.Test\obj\Debug\net9.0\TicTacToe.Test.sourcelink.json

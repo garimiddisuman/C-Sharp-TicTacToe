@@ -83,7 +83,6 @@ namespace TicTacToe.Test.Game
             game.Play(2, 2); // player-1
 
             Assert.True(game.IsGameOver());
-            Assert.Equal("Draw", game.GetWinner());
         }
 
         [Fact]

@@ -5,8 +5,8 @@ namespace TicTacToe.Game
         private int _currentPlayerIndex = 0;
         private readonly List<string> _players;
         private readonly List<string> _symbols = new List<string> { "X", "O" };
-        private bool _isGameOver = false;
         private string? _winner = null;
+        private int _moveCount = 0;
 
         private readonly List<List<string>> _board = new List<List<string>>
         {
@@ -37,41 +37,31 @@ namespace TicTacToe.Game
             return false;
         }
 
-        private bool IsBoardFull()
-        {
-            return !_board.Any(row => row.Any(cell => cell == " "));
-        }
-
+        public bool IsGameOver() =>  _moveCount == 9 || _winner != null;
+        
         public bool Play(int row, int col)
         {
-            if (_isGameOver || !IsValidMove(row, col)) return false;
+            if ( IsGameOver() || !IsValidMove(row, col)) return false;
 
-            _board[row][col] = _symbols[_currentPlayerIndex];
+            _board[row][col] = CurrentSymbol();
+            _moveCount++;
 
             if (CheckWin(row, col))
             {
-                _isGameOver = true;
                 _winner = _players[_currentPlayerIndex];
             }
-            else if (IsBoardFull())
+            else
             {
-                _isGameOver = true;
-                _winner = "Draw";
+                _currentPlayerIndex = (_currentPlayerIndex + 1) % _players.Count;
             }
 
-            _currentPlayerIndex = (_currentPlayerIndex + 1) % _players.Count;
             return true;
         }
 
-        public string CurrentPlayer()
-        {
-            return _players[_currentPlayerIndex];
-        }
+        public string CurrentPlayer() => _players[_currentPlayerIndex];
+        public string CurrentSymbol() => _symbols[_currentPlayerIndex];
 
         public List<List<string>> GetBoard() => _board;
-
-        public bool IsGameOver() => _isGameOver;
-
         public string GetWinner()
         {
             if (_winner != null) return _winner;
