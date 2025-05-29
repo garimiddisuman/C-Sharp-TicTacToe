@@ -19,7 +19,7 @@ namespace TicTacToe.src.Models
 
         public bool Mark(int row, int col)
         {
-            var symbol = CurrentSymbol();
+            Symbol symbol = CurrentSymbol();
 
             if (!_board.MarkSymbol(row, col, symbol))
                 return false;
@@ -43,18 +43,14 @@ namespace TicTacToe.src.Models
             return GameState.InProgress;
         }
 
-        public Symbol CurrentSymbol()
-        {
-            return _currentPlayerIndex == 0 ? Symbol.X : Symbol.O;
-        }
-
-        public string CurrentPlayer() => _players[_currentPlayerIndex];
-        public GameState GetGameState() => _gameState;
         public string GetWinner()
         {
             if (_gameState == GameState.Won) return CurrentPlayer();
 
             return "Winner not determined yet";
         }
+        public string CurrentPlayer() => _players[_currentPlayerIndex];
+        public GameState GetGameState() => _gameState;
+        public Symbol CurrentSymbol() => _currentPlayerIndex == 0 ? Symbol.X : Symbol.O;
     }
 }

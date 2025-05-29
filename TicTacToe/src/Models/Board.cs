@@ -1,4 +1,3 @@
-using System.Data;
 using TicTacToe.src.Enums;
 
 namespace TicTacToe.src.Models
@@ -40,7 +39,7 @@ namespace TicTacToe.src.Models
 
         private List<List<Symbol>> ResetGrid()
         {
-            var emptyGrid = new List<List<Symbol>>();
+            List<List<Symbol>> emptyGrid = new List<List<Symbol>>();
 
             for (int row = 0; row < _size; row++)
             {
