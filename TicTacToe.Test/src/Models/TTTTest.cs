@@ -11,8 +11,8 @@ namespace TicTacToe.Test.src.Models
             List<string> players = new List<string> { "Player-1", "Player-2" };
             TTT game = new TTT(players);
 
-            Assert.Equal(Symbol.X, game.CurrentSymbol());
-            Assert.Equal("Player-1", game.CurrentPlayer());
+            Assert.Equal(Symbol.X, game.GetCurrentSymbol());
+            Assert.Equal("Player-1", game.GetCurrentPlayer());
         }
 
         [Fact]
@@ -23,8 +23,8 @@ namespace TicTacToe.Test.src.Models
 
             bool firstMove = game.Mark(0, 0);
             Assert.True(firstMove);
-            Assert.Equal(Symbol.O, game.CurrentSymbol());
-            Assert.Equal("Player-2", game.CurrentPlayer());
+            Assert.Equal(Symbol.O, game.GetCurrentSymbol());
+            Assert.Equal("Player-2", game.GetCurrentPlayer());
         }
 
         [Fact]
