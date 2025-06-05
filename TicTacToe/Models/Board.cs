@@ -1,6 +1,6 @@
-using TicTacToe.src.Enums;
+using TicTacToe.Enums;
 
-namespace TicTacToe.src.Models
+namespace TicTacToe.Models
 {
     public class Board
     {

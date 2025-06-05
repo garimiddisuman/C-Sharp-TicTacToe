@@ -1,7 +1,7 @@
-using TicTacToe.src.Enums;
-using TicTacToe.src.Models;
+using TicTacToe.Enums;
+using TicTacToe.Models;
 
-namespace TicTacToe.Test.src.Models
+namespace TicTacToe.Test.Models
 {
     public class BoardTests
     {

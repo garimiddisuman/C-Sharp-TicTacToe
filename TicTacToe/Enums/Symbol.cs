@@ -1,4 +1,4 @@
-namespace TicTacToe.src.Enums
+namespace TicTacToe.Enums
 {
     public enum Symbol
     {
