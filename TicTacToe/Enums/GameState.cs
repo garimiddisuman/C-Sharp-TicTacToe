@@ -1,9 +1,8 @@
-namespace TicTacToe.Enums
+namespace TicTacToe.Enums;
+
+public enum GameState
 {
-    public enum GameState
-    {
-        InProgress,
-        Draw,
-        Won
-    }
+    InProgress,
+    Draw,
+    Won
 }

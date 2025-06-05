@@ -1,9 +1,8 @@
-namespace TicTacToe.Enums
+namespace TicTacToe.Enums;
+
+public enum Symbol
 {
-    public enum Symbol
-    {
-        X,
-        O,
-        Empty
-    }
+    X,
+    O,
+    Empty
 }
